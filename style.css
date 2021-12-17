@@ -71,10 +71,10 @@ header::before {
     }
     
 .navbar .menu {
-    width: 300px;
+    width: 400px;
     display: flex;
     justify-content: space-around;
-    margin-right: 1em;
+    margin-right: 2em;
     }
 
 .navbar .Logo {
@@ -86,11 +86,12 @@ header::before {
     text-decoration: none;
     font-size: 1.2em;
     color: var(--whiteColor);
+    justify-content: space-around;
 }
 
 .navbar .menu > a:hover{
     text-decoration: none;
-    color: var(--whiteColor);
+    color: var(--primaryColor);
 }
 
 .header-title {
@@ -108,16 +109,21 @@ header::before {
 .header-title > h2 {
     color: var(--whiteColor);
     font-size: 4rem;
+
 }
     
 .header-title .name {
-    color: var(--secondaryColor);
+    color: var(--whiteColor);
     padding:0 1rem;
     background-color: var(--primaryColor);
+    border-radius: 30px;
 }
 
 .header-title > p {
     max-width:600px;
+    color: var(--fontColor);
+    font-weight: bold;
+    font-size: 1.1em;
     margin-top: 1rem;
 }
 
@@ -131,7 +137,7 @@ header::before {
     width: 200px;
     border-radius: 35px;
     border: 2px solid var(--secondaryColor);
-    box-shadow: 10px 10px 14px 1px rgb(0 0 0 /20%) ;
+    box-shadow: 10px 10px 14px 1px rgb(0 0 0 /20%);
     cursor: pointer;
     transition: ease 0.2s;
 }
@@ -139,7 +145,9 @@ header::before {
 .social-media {
     display: flex;
     text-decoration: none;
-    width: 200px;
+    width: 400px;
+    size: 2em;
+    margin-top: 1em;
     margin-bottom: 3em;
     justify-content: center;
 
@@ -164,35 +172,50 @@ header::before {
 .about-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minimax(280px, 1fr));
-    padding: 0 15%;
+    padding: 0% 15%;
     align-items: center;
     justify-content: center;
 }
 
 .about-pic { 
-    width: 80%;
+    width: 100%;
     max-width: 300px;
+    height: 400px;
     object-fit: cover;
     border-radius: 100px 30px;
     border: 5px solid var(--whiteColor);
+    margin-left: 10em;
+    margin-top: 6em;
 }
+
 
 .top-title {
     letter-spacing: 3;
-    color: var(--secondaryColor);
     font-weight: 600;
+    color: var(--secondaryColor);
+}
+
+.about-detail {
+    margin-left: 40em;
+    margin-top: -30em;
 }
 
 .about-detail > p {
-    margin-bottom: 1rem;
-    color: var(--fontColor)
+    margin-bottom: 1em;
+    color: var(--fontColor);
+    width: 30em;
+    font-size: 1.8vh;
+}
+
+.about-detail > h1 {
 
 }
 
 .about-detail >button {
     padding: 0.4rem 2rem;
-    border: 2px solid var(--fontColor);
+    border: 2px solid var(--whiteColor);
     background: var(--fontColor);
+    font-size: 14px;
     color: var(--whiteColor);
     cursor: pointer;
 }
@@ -230,9 +253,9 @@ header::before {
 }
 
 .skill-detail > img {
-    background-color: #fff;
-    width: 45%;
-    border-radius: 10px;
+    background-color: var(--primaryColor);
+    width: 30%;
+    border-radius: 0px;
 }
 
 .skill-detail:hover {
@@ -243,11 +266,11 @@ header::before {
 .skill-detail > h2 {
     font-size: 1.2rem;
     line-height: 1.5;
-    color: var(--secondarycolor);
+    color: var(--secondaryColor);
 }
 
 .skill-detail > p {
-    font-size: 16px;
+    font-size: 15.8px;
 }
 
 .project {
@@ -258,26 +281,27 @@ header::before {
 }
 
 .project-wrapper {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 3em;
 }
 
 .project-detail {
-    width: 300px;
+    width: 370px;
     margin: 0.5rem;
     position: relative;
-    height: 150px;
+    height: 300px;
     overflow: hidden;
+    border: 4px var(--primaryColor) solid;
 }
 
 
+
 .project-image {
-    width: 15rem;
-    object-fit: cover;
-    height: 9rem;
-    cursor: pointer;
+    margin-left: 6em;
+    border: 4px solid whitesmoke;
+    border-radius: 9px;
 }
 
 
@@ -285,35 +309,60 @@ header::before {
 .project-detail:hover .project-image {
     display: none;
     background-color: var(--whiteColor);
-    transform: scale(1.2);
 }
+
+.project-info {
+    display: none;
+
+}
+
+.project-detail:hover .project-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--fontColor);
+    
+}
+
+
+.project-info > h2 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: var(--secondaryColor);
+}
+
+.project-info > p {
+    text-align: center;
+    margin:10px;
+    font-size: 16px;
+}
+
 
 .project-detail:hover {
     background-color: var(--whiteColor);
-    width: 15rem;
-    height: 9rem;
+    position: inherit;
+    border: 4px solid black;
+    border-radius: 9px;
+    border-color: black;
+    transition: 0.3s ease;
+    line-height: 18.2px;
 }
 
 .project-button {
-    display: none;
-    border: 2px solid var(--whiteColor);
-    background-color: var(--whitecolor);
+    border: 2px solid var(--primaryColor);
+    background-color: var(--fontColor);
+    color: var(--whiteColor);
     padding: 0.6rem 2rem;
-    color: var(--fontColor);
-    position: absolute;
-    left: 20%;
-    top: 35%;
-    z-index: 2;
+    margin-top: 1em;
     cursor: pointer;
+    float: right;
 }
 
-.project-detail:hover .project-button {
-    display: block;
-}
 
 .project-button:hover {
-    border: 2px solid var(--secondaryColor);
-    background: var(--secondaryColor);
+    border: 2px solid var(--primaryColor);
+    background: var(--primaryColor);
     color: var(--whiteColor);
 }
 
@@ -357,10 +406,33 @@ header::before {
     border: 2px solid var(--primaryColor);
     background-color: var(--primaryColor);
     color: var(--whiteColor);
+    width:175px;
+}
+
+.hire-wrapper > .downloadresume {
+    margin-top: -6em;
+    font-size: 16px;
+    padding: 0.6rem 3rem;
+    background-color: var(--fontColor);
+    border-color: var(--fontColor);
+    color: var(--whiteColor);
+    width:300px;
+    justify-content: center;
+}
+
+.hire-wrapper > .downloadresume:hover {
+    margin-top: -6em;
+    padding: 0.6rem 3rem;
+    border: 2px solid var(--fontColor);
+    background-color: transparent;
+    color: var(--primaryColor);
+    width:300px;
+    justify-content: center;
 }
 
 .hire-wrapper > button:hover {
     background-color: transparent;
+    cursor: pointer;
 }
 
 .line {
@@ -381,23 +453,23 @@ header::before {
     .navbar > .Logo {
         margin-left: -1em;
     }
+
     .menu {
         flex-direction: column;
         background: var(--primaryColor);
-        width: 100%;
         margin: 0;
         position: absolute;
         left: 0;
-        top: -100%;
         opacity: 0;
     }
 
     .menu.active {
         background: var(--fontColor);
-        top: 60;
         opacity: 1;
+        margin-top: 7em;
         width: 100%;
         text-align: center;
+        display: inline-flex;
     }
     .menu > a {
         line-height: 60px;
@@ -427,6 +499,64 @@ header::before {
         transform: translate(-8px) rotate(-45deg);
     }
 
+    .header-title > h2 {
+        color: var(--whiteColor);
+        font-size: 2.4rem;
+    }
+
+    .header-title {
+        margin-top: -3em;
+    }
+
+    .header-title .name {
+        color: var(--whiteColor);
+        padding:0 1rem;
+        background-color: var(--primaryColor);
+        border-radius: 30px;
+    }
+    
+    .header-title > p {
+        max-width:600px;
+        color: var(--fontColor);
+        font-weight: bold;
+        font-size: 1em;
+        margin-top: 1rem;
+    }
+    
+    .about-pic { 
+        width: 50%;
+        max-width: 200px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 100px 30px;
+        border: 5px solid var(--whiteColor);
+        margin-left: 4.7em;
+        margin-bottom: -2em;
+        margin-top: -0.5em;
+    }
+    
+    .about-detail {
+        margin-left: 5em;
+        margin-top: 4em;
+    }
+
+    .about-detail > p {
+        margin-bottom: 1em;
+        color: var(--fontColor);
+        width: 20em;
+        font-size: 0.9em;
+    }
+
+    .about-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minimax(280px, 1fr));
+        padding: 0% 15%;
+        align-items: center;
+        justify-content: center;
+        margin-left: -5em;
+    }
+
+
 }
 
 @media screen and (max-width: 480px) {
@@ -436,7 +566,62 @@ header::before {
     
     .header-title > h2 {
         font-size: 1.6rem;
+        color: var(--whiteColor);
     }
 
+    .header-title {
+        margin-top: -3em;
+    }
+
+    .header-title .name {
+        color: var(--whiteColor);
+        padding: 0 1rem;
+        background-color: var(--primaryColor);
+        border-radius: 30px;
+    }
     
+    .header-title > p {
+        max-width: 600px;
+        color: var(--fontColor);
+        font-weight: bold;
+        font-size: 1em;
+        margin-top: 1rem;
+    }
+    
+
+    .menu.active {
+        background: var(--fontColor);
+        opacity: 1;
+        margin-top: 7em;
+        width: 100%;
+        text-align: center;
+        display: inline-flex;
+    }
+
+    .about-pic { 
+        width: 50%;
+        max-width: 200px;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 100px 30px;
+        border: 5px solid var(--whiteColor);
+        margin-left: 4.7em;
+        margin-bottom: -2em;
+        margin-top: -0.5em;
+    }
+    
+    .about-detail {
+        margin-left: 5em;
+        margin-top: 4em;
+    }
+
+    .about-detail > p {
+        margin-bottom: 1em;
+        color: var(--fontColor);
+        width: 20em;
+        font-size: 1.9em;
+    }
+
+
 }
+
